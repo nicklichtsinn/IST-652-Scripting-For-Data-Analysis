@@ -1,0 +1,59 @@
+﻿Nicholas Lichtsinn
+IST 652
+Lab 3
+Problem 1: Write a Python function to multiply all the numbers in a list. Execute the function with at least 3 different lists of numbers.
+
+
+Code:
+# program to multiply all the numbers in a list
+ 
+def multlist(list) :
+     
+    # Multiply elements one by one
+    result = 1
+    for num in list:
+         result = num * result
+    return result
+     
+# my lists
+list1 = [7, 30, 2]
+list2 = [5, 19, 4]
+list3 = [3, -5, 8]
+print(multlist(list1))
+print(multlist(list2))
+print(multlist(list3))
+
+
+Output:
+420
+380
+-120
+
+
+Problem 2: Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters.
+ Code:
+def string_counter(string):
+    d={"upper_case":0, "lower_case":0}
+    for letter in string:
+        if letter.isupper():
+           d["upper_case"]+=1
+        elif letter.islower():
+           d["lower_case"]+=1
+        else:
+           pass
+    print ("Original String: ", string)
+    print ("Number of Upper case characters: ", d["upper_case"])
+    print ("Number of Lower case Characters: ", d["lower_case"])
+
+
+string_counter('The quick Brown Fox')
+string_counter('I know It''s Not easy for You, but there''s Bound to be a Learning Curve.')
+
+
+Output:
+Original String:  The quick Brown Fox
+Number of Upper case characters:  3
+Number of Lower case Characters:  13
+Original String:  I know Its Not easy for You, but theres Bound to be a Learning Curve.
+Number of Upper case characters:  7
+Number of Lower case Characters:  46

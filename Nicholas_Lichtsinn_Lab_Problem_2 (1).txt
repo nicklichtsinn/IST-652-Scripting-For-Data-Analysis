@@ -1,0 +1,58 @@
+﻿Nicholas Lichtsinn
+IST 652
+Lab 2
+a)
+stock = {"banana": 6, "apple": 0, "orange": 32, "pear": 15}
+prices = {"banana": 4, "apple": 2, "orange": 1.5, "pear": 3}
+Show the expression that gets the value of the stock dictionary at the key ‘orange’
+stock.get('orange') 
+Output: 32
+
+
+Show a statement that adds an item to the stock dictionary called ‘cherry’ with some integer value and that adds ‘cherry’ to the prices dictionary with a numeric value. (Or pick your own fruit name.)
+stock['cherry'] = 22
+prices['cherry'] = 5
+print(stock)
+print(prices)
+Output: 
+{'banana': 6, 'apple': 0, 'orange': 32, 'pear': 15, 'cherry': 22}
+{'banana': 4, 'apple': 2, 'orange': 1.5, 'pear': 3, 'cherry': 5}
+
+
+b)
+Write the code for a loop that iterates over the stock dictionary and prints each key and value.
+for x, y in stock.items():
+    print(x, y)
+Output:
+banana 6
+apple 0
+orange 32
+pear 15
+cherry 22
+
+
+c)
+Suppose that we have a list: groceries = [‘apple’, ‘banana’, ‘pear’]. Write the code that will sum the total number in stock of the items in the groceries list.
+groceries = ['apple', 'banana', 'pear']
+def sumstock(x):
+    total = 0
+    for item in x:
+        total += stock[item]
+    return total
+sumstock(groceries)
+
+
+Output:
+21
+
+
+d)
+Write the code that can print out the total value in stock of all the items. This program can iterate over the stock dictionary and for each item multiply the number in stock times the price of that item in the prices dictionary. (This can include the items for ‘cherry’ or not, as you choose.)
+def sumprices(x):
+    total = 0
+    for item in x:
+        total += prices[item] * stock[item]
+    return total
+sumprices(prices)
+Output:
+227.0
